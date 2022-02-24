@@ -32,25 +32,13 @@
 <p>Na home do site deve ser listado um grid com as dicas com possibilidade de filtro por tipo, marca, modelo e versão. Trazendo as dicas de todos os usuários.</p>
 
 
-<div id="screenshots"></div>
-
-## 📷 Screenshots
-<h1>
-    <p>Cadastro de usuário</p>
-    <img width="270" alt="Dashboard" src="https://user-images.githubusercontent.com/65552838/149450317-010411e7-d42c-43fd-8876-92e75e55cbf5.png">
-    <p>Login<p>
-    <img width="270" alt="User" src="https://user-images.githubusercontent.com/65552838/149450476-ba686459-e91a-46f3-aa64-72276e90c561.png">
-    <p>Home - Sem a necessidade de estar logado trazer as últimas dicas cadastradas com possibilidade de filtro.</p>
-    <img width="270" alt="Profile" src="https://user-images.githubusercontent.com/65552838/149450486-c8725f69-7391-48ca-b277-58aa7313ba76.png">
-    <p>Criar CRUD de dicas onde cada usuário terá sua própria listagem de dicas.<p>
-</h1>
-
 <div id="tecnologias-utilizadas"></div>
 
 
 ## 🚀 Tecnologias Utilizadas
 
 - [PHP 8.1](https://php.net/)
+
 - [Laravel 9.x](https://laravel.com/)
 
 <div id="plugins"</div>
