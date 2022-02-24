@@ -1,0 +1,172 @@
+html,
+/* ===================================
+                SCROLLBAR
+   =================================== */
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #4e73df #fff;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: #4e73df;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #fff;
+}
+
+/* ===================================
+                HEADER
+   =================================== */
+.btn-header {
+    padding: 10px 18px;
+    background-color: #FFF;
+    margin-right: 15px;
+    color: #204065;
+}
+
+.btn-header span {
+    margin-left: 3px;
+}
+@media (max-width: 576px) {
+    .btn-header {
+      border-radius: 2px;
+      margin-left: 0;
+      margin-right: 5px;
+    }
+  
+    .btn-header span {
+      display: none;
+    }
+  
+    .card-header {
+      padding: 0.75rem 0.5rem;
+    }
+
+}
+.card {
+    border: none;
+    box-shadow: 0 0 1px rgb(0 0 0 / 13%), 0 1px 3px rgb(0 0 0 / 20%);
+    margin: 25px 0;
+}
+
+.card-header {
+    display: flex;
+    border-bottom: none;
+    justify-content: space-between;
+}
+
+.card-header .btn {
+    padding: 0 10px;
+}
+
+.card-header .card-title {
+    font-size: 1.2rem;
+    color: #204065;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+/* ===================================
+                TABLE
+   =================================== */
+.table tr:not(.empty-table) td:last-child {
+    width: 100px;
+}
+
+.table .empty-table {
+    font-size: 18px;
+    text-align: center;
+}
+
+.table .empty-table p {
+    margin-top: 20px;
+}
+
+@media (max-width: 576px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    .table {
+        border-top: none;
+    }
+
+    .table tr:not(.empty-table) td:last-child {
+        top: 0;
+        right: 0;
+        width: 50px;
+        position: absolute;
+    }
+
+    .table tr:not(:first-child) td:first-child {
+        border-top: 3px solid #e3e6f0;
+    }
+
+    .table td:last-child a:first-childss {
+        margin-bottom: 15px;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    tbody tr {
+        position: relative;
+    }
+
+    tfoot tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .table tr td .dropdown-menu {
+        min-width: 5rem;
+    }
+
+    .table tr td .dropdown-menu .dropdown-item {
+        padding: 8px 20px;
+    }
+
+    .table tr td .btn-dot {
+        padding: 0 8px;
+    }
+}
+
+@media (min-width: 577px) {
+    .table tr td .dropdown-menu {
+        margin: 0;
+        padding: 0;
+        border: none;
+        display: flex;
+        min-width: 5rem;
+        background: none;
+    }
+
+    .table tr td .dropdown-menu .dropdown-item {
+        width: auto;
+        display: block;
+        line-height: 1.5;
+        margin-right: 5px;
+        font-size: 0.875rem;
+        border-radius: 0.2rem;
+        padding: 0.25rem 0.5rem;
+    }
+
+    .table tr td .dropdown-menu .dropdown-item span {
+        display: none;
+    }
+
+    .table tr td .btn-dot {
+        display: none;
+    }
+}
