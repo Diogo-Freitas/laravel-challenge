@@ -63,17 +63,17 @@
 1. Faça um clone :
 
 ```sh
-  # Clonar o repositório
+  # Clonando o repositório
   $ git clone https://github.com/Diogo-Freitas/laravel-challenge.git
 
-  # Entrar no diretório
+  # Entrando no diretório
   $ cd laravel-challenge
 ```
 
 2. Instalando a Aplicação Utilizando Sail com Docker:
 
 ```sh
-  # Instale as dependências para a aplicação
+  # Instalando dependências do Composer para aplicativos existentes
   $ docker run --rm \
     -u "$(id -u):$(id -g)" \
     -v $(pwd):/var/www/html \
@@ -81,21 +81,21 @@
     laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs
  
-  # Alias para os comandos Sail
+  # Configurando um Alias Bash
   $ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
   
-  # Executa a apliação
+  # Iniciando Sail
   $ sail up -d
   
-  # Crie um arquivo .env
+  # Criando um arquivo .env
   $ cp .env.example .env
 
-  # Crie uma nova chave
+  # Gerando uma nova chave
   $ sail artisan key:generate
   
-  # Execute o composer pelo sail
+  # Execultando o composer
   $ sail composer install
 
-  # Execute as migrações
+  # Execultando as migrações
   $ sail artisan migrate --seed
 ```
