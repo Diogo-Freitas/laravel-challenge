@@ -32,6 +32,15 @@
 <p>Na home do site deve ser listado um grid com as dicas com possibilidade de filtro por tipo, marca, modelo e versão. Trazendo as dicas de todos os usuários.</p>
 
 
+<div id="screenshots"></div>
+
+## 📷 Screenshots
+<h1>
+    <img width="270" alt="Home" src="https://user-images.githubusercontent.com/6785738/155634798-00498056-1509-415d-a86a-67c68fa207e4.png">
+    <img width="270" alt="CRUD" src="https://user-images.githubusercontent.com/6785738/155635661-1deb128e-4ffb-4b22-b261-22785ca23b49.png">
+    <img width="270" alt="TIPS" src="https://user-images.githubusercontent.com/6785738/155635708-faa0f41e-b55b-4866-b643-d5883a504b5e.png">
+</h1>
+
 <div id="tecnologias-utilizadas"></div>
 
 
@@ -73,7 +82,7 @@
 
     composer install --ignore-platform-reqs
  
-  #Alias para os comandos Sail
+  # Alias para os comandos Sail
   $ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
 
   # Execute o composer pelo sail
