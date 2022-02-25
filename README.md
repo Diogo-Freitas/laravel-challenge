@@ -85,12 +85,12 @@
   
   # Criando um arquivo .env
   $ cp .env.example .env
-
-  # Gerando uma nova chave
-  $ sail artisan key:generate
   
   # Iniciando Sail
   $ sail up -d
+  
+  # Gerando uma nova chave
+  $ sail artisan key:generate
   
   # Execultando o composer
   $ sail composer install
