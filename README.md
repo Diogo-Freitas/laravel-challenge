@@ -47,7 +47,6 @@
 ## 🚀 Tecnologias Utilizadas
 
 - [PHP 8.1](https://php.net/)
-
 - [Laravel 9.x](https://laravel.com/)
 
 <div id="plugins"</div>
@@ -84,14 +83,14 @@
   # Configurando um Alias Bash
   $ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
   
-  # Iniciando Sail
-  $ sail up -d
-  
   # Criando um arquivo .env
   $ cp .env.example .env
 
   # Gerando uma nova chave
   $ sail artisan key:generate
+  
+  # Iniciando Sail
+  $ sail up -d
   
   # Execultando o composer
   $ sail composer install
