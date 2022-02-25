@@ -83,21 +83,19 @@
  
   # Alias para os comandos Sail
   $ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-
-  # Execute o composer pelo sail
-  $ sail composer install
-
+  
+  # Executa a apliação
+  $ sail up -d
+  
   # Crie um arquivo .env
   $ cp .env.example .env
 
   # Crie uma nova chave
   $ sail artisan key:generate
-
-  # Configure os parâmetros do servidor no arquivo .env
+  
+  # Execute o composer pelo sail
+  $ sail composer install
 
   # Execute as migrações
   $ sail artisan migrate --seed
-
-  # Executa a apliação
-  $ sail up -d
 ```
