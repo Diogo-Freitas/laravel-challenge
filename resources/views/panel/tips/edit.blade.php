@@ -106,7 +106,7 @@
                 var brand = '{{ old('brand', $tip->brand_id) }}';
                 $("#inputBrand").html('');
                 $.ajax({
-                    url: "http://localhost/panel/dicas/buscar/marca",
+                    url: "{{ route('panel.tips.fetch.brand') }}",
                     type: "POST",
                     data: {
                         vehicle: vehicle,
@@ -128,7 +128,7 @@
                 var vehicle = this.value;
                 $("#inputBrand").html('');
                 $.ajax({
-                    url: "http://localhost/panel/dicas/buscar/marca",
+                    url: "{{ route('panel.tips.fetch.brand') }}",
                     type: "POST",
                     data: {
                         vehicle: vehicle,
@@ -151,7 +151,7 @@
                 var model = '{{ old('model', $tip->model_id) }}';
                 $("#inputBrand").html('');
                 $.ajax({
-                    url: "http://localhost/panel/dicas/buscar/modelo",
+                    url: "{{ route('panel.tips.fetch.model') }}",
                     type: "POST",
                     data: {
                         vehicle: vehicle,
@@ -175,7 +175,7 @@
                 var brand = this.value;
                 $("#inputModel").html('');
                 $.ajax({
-                    url: "http://localhost/panel/dicas/buscar/modelo",
+                    url: "{{ route('panel.tips.fetch.model') }}",
                     type: "POST",
                     data: {
                         vehicle: vehicle,

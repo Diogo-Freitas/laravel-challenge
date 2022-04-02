@@ -14,7 +14,7 @@ class TipController extends Controller
 {
     public function index()
     {
-        $tips = Tip::where('user_id', auth()->user()->id)->paginate(50);
+        $tips = Tip::where('user_id', auth()->user()->id)->paginate(2);
 
         return view('panel.tips.index', compact('tips'));
     }
@@ -46,7 +46,7 @@ class TipController extends Controller
 
     public function edit(Tip $tip)
     {
-        abort_if($tip->user_id != auth()->user()->id, 404);
+        abort_if($tip->user_id != auth()->user()->id, 403);
 
         $vehicles = Vehicle::all();
 
@@ -72,7 +72,7 @@ class TipController extends Controller
 
     public function destroy(Tip $tip)
     {
-        abort_if($tip->user_id != auth()->user()->id, 404);
+        abort_if($tip->user_id != auth()->user()->id, 403);
 
         try {
             $tip->delete();

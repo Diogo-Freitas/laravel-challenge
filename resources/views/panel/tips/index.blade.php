@@ -77,7 +77,7 @@
                         <div class="col-sm-12 col-md-7">
                             <div class="dataTables_paginate paging_simple_numbers">
                                 <ul class="pagination">
-
+                                    {!! $tips->links() !!}
                                 </ul><!-- .pagination -->
                             </div><!-- .dataTables_paginate -->
                         </div><!-- .col-md-7 -->
@@ -91,8 +91,7 @@
 
 @section('scripts')
     <!-- Exibir alerta de configrmação quando clicar em excluir -->
-    <script src="http://localhost/vendor/sweetalert2/sweetalert2.min.js"></script>
-    <script src="http://localhost/vendor/sweetalert2/sweetalert2.script.js"></script>
-    <link rel="stylesheet" href="http://localhost/vendor/sweetalert2/sweetalert2.min.css">
-
+    <script src="{{ asset('vendor/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('vendor/sweetalert2/sweetalert2.script.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
 @endsection
