@@ -11,14 +11,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Custom fonts -->
-    <link href="http://localhost/vendor/fontawesome-free-6.0.0-web/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/fontawesome-free-6.0.0-web/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
     <!-- Custom styles -->
-    <link href="http://localhost/css/panel.css" rel="stylesheet">
+    <link href="{{ asset('css/panel.css') }}" rel="stylesheet">
 
-    <link rel="shortcut icon" href="http://localhost/img/favicon.ico">
-    <title>Panel - Tips</title>
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}">
+    <title>@yield('title', 'Panel - Tips')</title>
 </head>
 
 <body id="page-top">
@@ -62,16 +62,15 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
+    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('js/panel.js') }}"></script>
 
-    <script src="http://localhost/vendor/jquery/jquery.min.js"></script>
-    <script src="http://localhost/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="http://localhost/vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="http://localhost/js/panel.js"></script>
-
-        <!-- Exibir alerta de configrmação quando clicar em excluir -->
-    <script src="http://localhost/vendor/sweetalert2/sweetalert2.min.js"></script>
-    <script src="http://localhost/vendor/sweetalert2/sweetalert2.script.js"></script>
-    <link rel="stylesheet" href="http://localhost/vendor/sweetalert2/sweetalert2.min.css">
+    <!-- Exibir alerta de configrmação quando clicar em excluir -->
+    <script src="{{ asset('vendor/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('vendor/sweetalert2/sweetalert2.script.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('vendor/sweetalert2/sweetalert2.min.css') }}">
 
     @yield('scripts')
 

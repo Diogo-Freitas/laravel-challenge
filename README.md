@@ -36,13 +36,9 @@
 
 ## 📷 Screenshots
 <h1>
-    <p>Cadastro de usuário</p>
-    <img width="270" alt="Dashboard" src="https://user-images.githubusercontent.com/65552838/149450317-010411e7-d42c-43fd-8876-92e75e55cbf5.png">
-    <p>Login<p>
-    <img width="270" alt="User" src="https://user-images.githubusercontent.com/65552838/149450476-ba686459-e91a-46f3-aa64-72276e90c561.png">
-    <p>Home - Sem a necessidade de estar logado trazer as últimas dicas cadastradas com possibilidade de filtro.</p>
-    <img width="270" alt="Profile" src="https://user-images.githubusercontent.com/65552838/149450486-c8725f69-7391-48ca-b277-58aa7313ba76.png">
-    <p>Criar CRUD de dicas onde cada usuário terá sua própria listagem de dicas.<p>
+    <img width="270" alt="Home" src="https://user-images.githubusercontent.com/6785738/155634798-00498056-1509-415d-a86a-67c68fa207e4.png">
+    <img width="270" alt="CRUD" src="https://user-images.githubusercontent.com/6785738/155635661-1deb128e-4ffb-4b22-b261-22785ca23b49.png">
+    <img width="270" alt="TIPS" src="https://user-images.githubusercontent.com/6785738/155635708-faa0f41e-b55b-4866-b643-d5883a504b5e.png">
 </h1>
 
 <div id="tecnologias-utilizadas"></div>
@@ -66,42 +62,39 @@
 1. Faça um clone :
 
 ```sh
-  # Clonar o repositório
+  # Clonando o repositório
   $ git clone https://github.com/Diogo-Freitas/laravel-challenge.git
 
-  # Entrar no diretório
+  # Entrando no diretório
   $ cd laravel-challenge
 ```
 
 2. Instalando a Aplicação Utilizando Sail com Docker:
 
 ```sh
-  # Instale as dependências para a aplicação
+  # Instalando dependências do Composer para aplicativos existentes
   $ docker run --rm \
-        -u "$(id -u):$(id -g)" \
-        -v $(pwd):/var/www/html \
-        -w /var/www/html \
-        laravelsail/php81-composer:latest \
-
+    -u "$(id -u):$(id -g)" \
+    -v $(pwd):/var/www/html \
+    -w /var/www/html \
+    laravelsail/php81-composer:latest \
     composer install --ignore-platform-reqs
  
-  #Alias para os comandos Sail
+  # Configurando um Alias Bash
   $ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-
-  # Execute o composer pelo sail
+  
+  # Criando um arquivo .env
+  $ cp .env.example .env
+  
+  # Iniciando Sail
+  $ sail up -d
+  
+  # Gerando uma nova chave
+  $ sail artisan key:generate
+  
+  # Execultando o composer
   $ sail composer install
 
-  # Crie um arquivo .env
-  $ cp .env.example .env
-
-  # Crie uma nova chave
-  $ sail artisan key:generate
-
-  # Configure os parâmetros do servidor no arquivo .env
-
-  # Execute as migrações
+  # Execultando as migrações
   $ sail artisan migrate --seed
-
-  # Executa a apliação
-  $ sail up -d
 ```
